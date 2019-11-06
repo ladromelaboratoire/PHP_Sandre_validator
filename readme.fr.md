@@ -59,12 +59,14 @@ Public
  - Ajouter d'autres thématique qu'EDILabo
  - Vérifier la robustesse de la connexion au webservice Sandre
  - Ajouter le support des demandes de transformation
+ - tester contre le webservice Sandre V5
 
 
 # Documentation externe
 
  - Sandre [Reference Api](http://www.sandre.eaufrance.fr/api-referentiel)
  - Sandre [webservice doc](http://www.sandre.eaufrance.fr/sites/default/files/IMG/pdf/sandre_procedure_webservice_parseur_V4.pdf)
+ - Sandre [webservice doc V5](http://www.sandre.eaufrance.fr/sites/default/files/IMG/pdf/sandre_procedure_webservice_parseur_V5.pdf)
 
 # Auteurs
 La Drôme Laboratoire - 26 - France
