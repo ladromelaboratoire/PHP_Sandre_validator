@@ -1,4 +1,16 @@
 {
-  "name": "ladromelabo/sandre_validator",
-  "version": "1.0.0"
+	"name": "ladromelabo/sandre_validator",
+	"version": "1.0.0",
+	"description": "validation of XML Sandre file against Sandre's webservices",
+	"homepage": "https://github.com/ladromelaboratoire/PHP_Sandre_validator",
+	"authors": [{
+		"name": "La Drôme Laboratoire",
+		"email": "",
+		"homepage": "https://github.com/ladromelaboratoire",
+		"role": "developer"
+	}],
+	"license": "GPL-2.0",
+	"require": {
+		"php": ">=7.1"
+	}
 }
