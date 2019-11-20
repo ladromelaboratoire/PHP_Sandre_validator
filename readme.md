@@ -58,6 +58,7 @@ Public
  - Improve connection robustness to webservice
  - Add transformation requests
  - Test against V5 Sandre's webservice
+ - Switch to design patterns
 
 
 # External documentation
