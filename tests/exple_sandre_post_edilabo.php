@@ -1,6 +1,6 @@
 <?php
 /**
- * @file exple_sandre_getstatus_edilabo.php
+ * @file exple_sandre_post_edilabo.php
  * @author  Laboratoire Départemental de La Drôme (26) - France
  * @version 1.0
  * @date 2018/11/15
@@ -20,35 +20,47 @@
  *
  * @section DESCRIPTION
  *
- * This example uses the Sandre_validate class to request the validation status of an EDILabo file. It uses the token provided earlier by the webservice
- * It provides the results and error. Logs can be activated
+ * This example uses the Sandre_validate class to post an EDIlabo file to Sandre's webservice
+ * It provides the token and error. Logs can be activated
  */
-require_once('./lib/class.sandre.validator.php');
+require '../vendor/autoload.php';
+use ladromelaboratoire\php_sandre_validator\Sandre_validator;
 
-	//Data
-	$token = "2018-11-16_14-11-51-528@myxmlfile.xml"; //warning, this one will generate HTTP 500 error Sandre side
+	//data to process
+	$file_sandre = ('./sampledata/myxmlfile.xml');
 	$person = array("LDA26-Name", "LDA26-Firstname", "email@domain.tld");
 	$entity = array("Laboratoire Departemental de la Drome", "lims", "22260001700362");
-
-	////////////////////////////////////////////////
-	//Check validation using Sandre_Validator class
-	////////////////////////////////////////////////
+	
+	//////////////////////////////////////////////
+	//data processing using Sandre_Validator class
+	//////////////////////////////////////////////
 	$sandre = New Sandre_validator($entity);
 	$sandre->setDebug(false);
 	$sandre->setRequester($person);
-	$sandre->setToken($token);
-	$result = $sandre->checkValidation();
-
+	$sandre->setFileXml($file_sandre);
+	$sandre->send();
+	
+	/*
+	 *	Other usage : using a loop to submit several files and storing the token for each one. $file_sandre is then an array
+	 *
+	 *  for ($i=0; $i < count($file_sandre); $i++) {
+	 *		$sandre->setFileXml($file_sandre[$i]);
+	 *		$sandre->send();
+	 *		$tokens[] = $sandre->getToken();
+	 *	}
+	 *
+	 */
 
 	
 	///////////////////////////////////////////////
 	//display results as plain text for the example
 	///////////////////////////////////////////////
 	echo "<html><body><pre>";
-	
-	echo "Token: " . $sandre->getToken() . "\r\n\r\n";
-	echo "Result\r\n";
-	print_r($result);
+
+	echo "Token: " . $sandre->getToken() . "\r\n";
+	echo "ACK: " . $sandre->getAckUri() . "\r\n";
+	echo "Cert: " . $sandre->getCertUri() . "\r\n";
+	echo "Cert Detailed: " . $sandre->getCertDetailedUri() . "\r\n";
 	echo "\r\n\r\n";
 	echo "Errors\r\n";
 	print_r ($sandre->getErrors());

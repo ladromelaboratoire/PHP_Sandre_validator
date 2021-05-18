@@ -23,7 +23,7 @@
  * PHP class to submit EDILabo XML files & check validity against Sandre's webservice
  * Supports EDILabo V1.0 and V1.1
  */
-
+namespace ladromelaboratoire\php_sandre_validator;
 
 define("___SANDREWSURI", "http://sandre.eaufrance.fr/PS/parseurSANDRE");
 define("___SANDREACKURI", "http://sandre.eaufrance.fr/PS/Acquittement?jeton=");
