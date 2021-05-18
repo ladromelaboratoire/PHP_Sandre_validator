@@ -4,6 +4,8 @@ This library has been developped againts the Sandre's API V4 and need to be migr
 
 ## Doc
 Please refer to the `./doc`
+- [Doc en Français](./doc/readme.fr.md)
+- [Doc in English](./doc/readme.md)
 
 ## Composer
 This has been modified as a composer module

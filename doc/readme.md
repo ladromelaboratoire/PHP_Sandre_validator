@@ -65,7 +65,7 @@ Public
 
  - Sandre [Reference Api](http://www.sandre.eaufrance.fr/api-referentiel)
  - Sandre [webservice doc V4](http://www.sandre.eaufrance.fr/sites/default/files/IMG/pdf/sandre_procedure_webservice_parseur_V4.pdf)
- - Sandre [webservice doc V5](www.sandre.eaufrance.fr/sites/default/files/IMG/pdf/sandre_procedure_webservice_parseur_V5.pdf)
+ - Sandre [webservice doc V5](http://www.sandre.eaufrance.fr/sites/default/files/IMG/pdf/sandre_procedure_webservice_parseur_V5.pdf)
 
 # Authors
 La Drôme Laboratoire - 26 - France
