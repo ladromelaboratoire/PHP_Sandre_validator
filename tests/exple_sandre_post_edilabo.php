@@ -27,7 +27,7 @@ require '../vendor/autoload.php';
 use ladromelaboratoire\php_sandre_validator\Sandre_validator;
 
 	//data to process
-	$file_sandre = ('./sampledata/myxmlfile.xml');
+	$file_sandre = ('./sampledata/LABO_DEST_20210514_065440.xml');
 	$person = array("LDA26-Name", "LDA26-Firstname", "email@domain.tld");
 	$entity = array("Laboratoire Departemental de la Drome", "lims", "22260001700362");
 	
@@ -35,7 +35,7 @@ use ladromelaboratoire\php_sandre_validator\Sandre_validator;
 	//data processing using Sandre_Validator class
 	//////////////////////////////////////////////
 	$sandre = New Sandre_validator($entity);
-	$sandre->setDebug(false);
+	$sandre->setDebug(true);
 	$sandre->setRequester($person);
 	$sandre->setFileXml($file_sandre);
 	$sandre->send();

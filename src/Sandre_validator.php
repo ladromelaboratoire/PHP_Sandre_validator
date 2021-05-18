@@ -24,10 +24,11 @@
  * Supports EDILabo V1.0 and V1.1
  */
 namespace ladromelaboratoire\php_sandre_validator;
+use ZipArchive;
 
-define("___SANDREWSURI", "http://sandre.eaufrance.fr/PS/parseurSANDRE");
-define("___SANDREACKURI", "http://sandre.eaufrance.fr/PS/Acquittement?jeton=");
-define("___SANDRECERTURI", "http://sandre.eaufrance.fr/parseur/getCertificat.php?jeton=");
+define("___SANDREWSURI", "https://www.sandre.eaufrance.fr/PS5/api/upload");
+define("___SANDREACKURI", "http://www.sandre.eaufrance.fr/PS5/api/acquittement/");
+define("___SANDRECERTURI", "http://www.sandre.eaufrance.fr/PS5/api/certificat/");
 define("___SANDRECERTFULLURI", "http://www.sandre.eaufrance.fr/parseur/getCertificatD.php?jeton=");
 define("___UA", "LDA26-PHPbot");
 define("___VERSION", "1.0");

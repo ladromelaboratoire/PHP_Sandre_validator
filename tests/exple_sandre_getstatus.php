@@ -37,7 +37,7 @@ use ladromelaboratoire\php_sandre_validator\Sandre_validator;
 	//Check validation using Sandre_Validator class
 	////////////////////////////////////////////////
 	$sandre = new Sandre_validator($entity);
-	$sandre->setDebug(false);
+	$sandre->setDebug(true);
 	$sandre->setRequester($person);
 	$sandre->setToken($token);
 	$result = $sandre->checkValidation();
